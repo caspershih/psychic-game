@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <title>Document</title>
+<title>Psychic game</title>
+
 </head>
-<body>
 
-<script>
-
-    
-
-</script>
-    
-=======
-    <title>Psychic game</title>
-</head>
 <body>
 <script type="text/javascript">
 
-    <div id="game">
-        Press any key to start the game.
-    </div>
+<div id="game">Press any key to start the game.</div>
 
-    // Array that creates random words
+    // This array that caintains random words
+    var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole"];
+
     
-    
-    // Wins and loses
+    // varibles for Wins and loses
+    var guessesLeft = 0;
     var wins = 0;
     var loses = 0;
 
     // The game is set to be onkeyup
     document.onkeyup = function(event) {
 
+    //player starts playing
+    var playerGuess = event.key;
 
-    //This part displays all the information players need to know
+    //Computer will randomly generate a word from the word bank
+
+
+    //player gets the correct guess
+
+
+    //player gets the wrong guess
+
+
+    //number of guesses will going down by 1 if player gets the wrong letter
+
+
+    //This part displays all the information/stats
     var html =
-    "<p> Your guesses: " + 
-    
+        "<p>guesses left: " + guessesLeft + "</p>" +
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" ;
 
     }
 
 </script>
->>>>>>> bc5817d565aeb7c4aa8254c7ed3312bcba2d52f5
+
+<h1>Press any key to start the game</h1>
+
+
 </body>
+
 </html>
