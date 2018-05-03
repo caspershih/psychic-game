@@ -11,9 +11,8 @@
 <div id="game">Press any key to start the game.</div>
 
     // This array that caintains random words
-    var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole"];
+    var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole", "gravity"];
 
-    
     // varibles for Wins and loses
     var guessesLeft = 0;
     var wins = 0;
@@ -26,10 +25,13 @@
     var playerGuess = event.key;
 
     //Computer will randomly generate a word from the word bank
+    var rand = wordbank[Math.floor(Math.random()*wordbank.length)]
 
+    //Display spaces for the length of the unknown word
+    
 
     //player gets the correct guess
-
+    if ((playerGuess ==="") && (come));
 
     //player gets the wrong guess
 
