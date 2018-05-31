@@ -12,57 +12,84 @@
     <h3></h3>
 </div>
 
-<div class="container-left">
-    <div class="game-container">
+<div class="game-container">
+    <div class="container-left">
 
     </div>
 </div>
 
 <div class="container-right">
-
-
+    <p>Player guesses left: </p>
+    <p>Wins: </p>
+    <p>Loses: </p>
 </div>
 
-<script type="text/javascript">
+<script>
+
+// difining varibles
+    var guessesLeft = 10;
+    var wins = 0;
+    var loses = 0;
 
 // This array that caintains random words
     var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole", "gravity"];
 
-    // For loop for the blank spaces
+// For loop for the array
     for (var i=0; i<word.length; i++) 
 
-    // varibles for Wins and loses
-    var guessesLeft = 5;
-    var wins = 0;
-    var loses = 0;
+// randomly pick an word from the array
 
-    // The game is set to be onkeyup
+
+// The game is set to be onkeyup
     document.onkeyup = function(event) {
         
 
-    //player starts playing
+//player starts playing
     var playerGuess = event.key;
 
 
-    //Computer will randomly generate a word from the word bank
+//Computer will randomly generate a word from the word bank
     var rand = wordbank[Math.floor(Math.random()*wordbank.length)]
-
     
-    //player gets the correct guess
+//player gets the correct guess
     if ((playerGuess === "") && (computer));
 
-    //player gets the wrong guess
+// player gets the wrong guess
     if ((playerGuess === "") && (computer));
 
-    //number of guesses will going down by 1 if player gets the wrong letter
+// number of guesses the player has
 
 
-    //This part displays all the information/stats
+//number of guesses will going down by 1 if player gets the wrong letter
+
+
+//This part displays all the information/stats
     var html =
         "<p>guesses left: " + guessesLeft + "</p>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" ;
     }
+
+// the new game function
+    function newGame() {
+
+    }
+
+// the winning function
+    function win() {
+        wins ++;
+        newGame();
+    }
+
+// the losing function
+    function lose() {
+        lose ++;
+        newGame();
+    }
+
+// call the new game
+    newGame()
+    
 
 </script>
 </body>
