@@ -1,3 +1,9 @@
 body {
     background-color: black;
 }
+
+.container-left {
+    border: solid;
+    border-color: #fff;
+    border: 400px;
+}
