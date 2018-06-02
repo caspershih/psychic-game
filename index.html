@@ -30,15 +30,18 @@
     var guessesLeft = 10;
     var wins = 0;
     var loses = 0;
+    var randomWord;
 
 // This array that caintains random words
-    var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole", "gravity"];
+    var wordBank = ["earth", "interstallar", "space", "galaxy", "black hole", "gravity"];
 
-// For loop for the array
-    for (var i=0; i<word.length; i++) 
+// For loop for the array 
+    for (var i=0; i<word.length; i++) {
+        playerGuess.push("_");
+    }
 
 // randomly pick an word from the array
-    
+    document.getElementById(".container-left").innerHTML = wordBank;
 
 // The game is set to be onkeyup
     document.onkeyup = function(event) {
@@ -49,38 +52,29 @@
 //Computer will randomly generate a word from the word bank
     var rand = wordbank[Math.floor(Math.random()*wordbank.length)]
     
-//player gets the correct guess
-    if ((playerGuess === "") && (computer));
-
-// player gets the wrong guess
-    if ((playerGuess === "") && (computer));
-
-// number of guesses the player has
-
-
-//number of guesses will going down by 1 if player gets the wrong letter
-
+    }
 
 //This part displays all the information/stats
     var html =
         "<p>guesses left: " + guessesLeft + "</p>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" ;
-    }
 
 // the new game function
     function newGame() {
-
+        
     }
 
 // the winning function
     function win() {
+        if ((playerGuess === "") && (randomWord));
         wins ++;
         newGame();
     }
 
 // the losing function
     function lose() {
+        if ((playerGuess === "") && (randomWord));
         lose ++;
         newGame();
     }
