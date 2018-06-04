@@ -31,6 +31,12 @@
     var wins = 0;
     var loses = 0;
 
+// defining varibles while working with the array
+
+    var wordElement = document.getElementById("word");
+    var letterCount = document.getElementById("letterCount");
+    var currentGuess = document.getElementById("currentGuess");
+
 // This array that caintains random words
     var wordbank = ["earth", "interstallar", "space", "galaxy", "black hole", "gravity"];
 
@@ -59,7 +65,10 @@
 
 
 //number of guesses will going down by 1 if player gets the wrong letter
-
+    function currentGuess() {
+                
+        guessesLeft --;
+    }
 
 //This part displays all the information/stats
     var html =
@@ -70,17 +79,19 @@
 
 // the new game function
     function newGame() {
-
+        
     }
 
 // the winning function
     function win() {
+        
         wins ++;
         newGame();
     }
 
 // the losing function
     function lose() {
+        
         lose ++;
         newGame();
     }
