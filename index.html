@@ -30,11 +30,9 @@
     var guessesLeft = 10;
     var wins = 0;
     var loses = 0;
-    var randomWord;
 
 // defining varibles while working with the array
 
-    var wordElement = document.getElementById("word");
     var letterCount = document.getElementById("letterCount");
     var currentGuess = document.getElementById("currentGuess");
 
@@ -69,7 +67,7 @@
 
 //number of guesses will going down by 1 if player gets the wrong letter
     function currentGuess() {
-                
+        
         guessesLeft --;
     }
 
@@ -82,7 +80,12 @@
 
 // the new game function
     function newGame() {
-        
+        if (guessesLeft === 0) {
+            alert("Great Job!");
+        }
+        else if (guessesLeft === -1) {
+            alert("Sorry, try again.");
+        }
     }
 
 // the winning function
